@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //with creating array;
+      /*function reverse_list(l)
+        {
+            document.write("given list: "+l+"<br>");
+            var i,len;
+            len=l.length;
+            var l1=[];
+            for(i=len-1;i>=0;i--)
+            {
+                l1.push(l[i]);
+                
+            }
+            document.write("reverse list: "+l1);
+        }
+        reverse_list([1,2,3,4,5,6,7,8,9])*/
+
+      function reverse(l) {
+        var i, j;
+        j = l.length - 1;
+        for (i = 0; i != j; i++) {
+          temp = l[i];
+          l[i] = l[j];
+          l[j] = temp;
+          j--;
+        }
+        document.write(l);
+      }
+
+      reverse([1, 2, 3, 4, 5]);
+    </script>
+  </body>
+</html>

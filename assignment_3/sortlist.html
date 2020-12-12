@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function   swap_element(l,a,b)
+         {
+                var temp=l[b];
+                l[b]=l[a];
+                l[a]=temp;
+            
+         }
+        function sort_array(l)
+        {
+            document.write("given list: "+l+"<br>");
+//console.log(l);
+var i,j,flag;
+for (i=0;i<l.length;i++){
+    flag=true;
+    for(j=1;j<l.length-i;j++){
+
+        if(l[j]<l[j-1])
+        {
+            swap_element(l,j,j-1);
+            flag=false;
+            // var temp=l[j-1];
+            // l[j-1]=l[j];
+            // l[j]=temp;
+        }
+        
+        
+    }
+    if(flag==true)
+        {
+            break;
+        }
+        }
+       document.write("sorted list: "+l)
+        
+
+        }
+       // console.log(l);
+// var n=l.length;
+// var l1=[];
+//         for (i=n-1;i>=0;i--){
+       
+//             l1.push(l[i]);
+
+        
+        
+//     }
+//     console.log(l1);
+//         }
+
+
+
+
+        sort_array([5,6,9,3,5,8]);
+    </script>
+</body>
+</html>
